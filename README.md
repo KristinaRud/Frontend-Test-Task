@@ -1,4 +1,4 @@
-# [DEMO](https://kristinarud.github.io/forkio-demo-html/)
+# [DEMO](https://kristinarud.github.io/Frontend-Test-Task/)
 
 Ціни для калькулятору:
 1) backblaze.com:

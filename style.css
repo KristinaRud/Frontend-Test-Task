@@ -78,6 +78,7 @@ body {
 
 .chart span {
     margin: 0 1em;
+    
     display: block;
     background: gray;
     animation: draw 1s ease-in-out;
