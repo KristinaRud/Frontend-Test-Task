@@ -1,0 +1,129 @@
+.rangeslider,
+.rangeslider2 {
+    width: 50%;
+}
+.slider{
+    display: flex;
+}
+
+.myslider,
+.myslider2 {
+    -webkit-appearance: none;
+    background: aquamarine;
+    width: 50%;
+    height: 20px;
+    opacity: 2;
+}
+
+
+.myslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: #34495E;
+    width: 5%;
+    height: 20px;
+}
+
+.myslider2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: #34495E;
+    width: 5%;
+    height: 20px;
+}
+
+
+.myslider:hover,
+.myslider2:hover {
+    opacity: 1;
+}
+
+
+@import "compass/css3";
+
+body {
+    font: 13px/1.3 'Lucida Grande', sans-serif;
+    color: #666;
+}
+
+.memory, .type{
+    position: absolute;
+    bottom: -60px;
+    left: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    transform: rotate(-90deg);
+}
+
+.chart {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 2%, rgba(0, 0, 0, 0) 2%);
+    background-size: 100% 50px;
+    background-position: left top;
+}
+
+.chart li {
+    position: relative;
+    display: table-cell;
+    vertical-align: bottom;
+    height: 700px;
+}
+
+.chart span {
+    margin: -25px 1em;
+    display: block;
+    background: gray;
+    animation: draw 1s ease-in-out;
+
+}
+
+.rotate{
+    transform: rotate(90deg);
+}
+
+.chart span:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 105%;
+    padding: 5px 1em 0;
+    display: block;
+    text-align: center;
+    content: attr(title);
+    word-wrap: break-word;
+    transform: rotate(-90deg);
+}
+
+.result{
+    color:aquamarine;
+    font-size: 26px;
+    transform: rotate(-90deg);
+}
+
+@keyframes draw {
+    0% {
+        height: 0;
+    }
+}
+
+@media (max-width:768px) {
+    .memory, .type,
+    .rotate,
+    .chart span:before,
+    .result{
+        transform: none;
+    }
+    .chart span:before{
+        top:100%;
+    }
+    .memory,.type{
+        left: 0px;
+    }
+}

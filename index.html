@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="slider">
+      <div class="rangeslider">
+        <input type="range" min="0" max="1000" value="1000" class="myslider" id="sliderStorage">
+        <p>Storage: <span id="demo"></span></p>
+    </div>
+    <div class="rangeslider2">
+        <input type="range" min="0" max="1000" value="1000" class="myslider2" id="sliderTransfer">
+        <p>Transfer: <span id="demo2"></span></p>
+    </div>
+    </div>
+    
+    <ul class="chart rotate">
+        <li>
+          <span class="s"  title="backblaze.com">
+            <p class="result" data-result-name="backblaze"></p>
+          </span>          
+        </li>
+        <li>
+          <span class="s"  title="bunny.net">
+            <p class="result" data-result-name="bunny"></p>
+            <div class="memory">
+              <input type="radio" id="hdd" name="memory" value="HDD" checked>
+              <label for="hdd">HDD</label>
+        
+              <input type="radio" id="ssd" name="memory" value="SSD">
+              <label for="ssd">SSD</label>
+            </div>
+          </span>
+        </li>
+        <li>
+          <span class="s" title="scaleway.com">
+            <p class="result" data-result-name="scaleway"></p>
+            <div class="type">
+              <input type="radio" id="multy" name="type" value="Multy" checked>
+              <label for="multy">Multy</label>
+        
+              <input type="radio" id="single" name="type" value="Single">
+              <label for="single">Single</label>
+            </div>
+          </span>
+          
+        </li>
+        <li>
+          <span class="s"  title="vultr.com">
+            <p class="result" data-result-name="vultr"></p>
+          </span>
+        </li>
+      </ul> 
+    <script src="./index.js"></script>
+</body>
+
+</html>
